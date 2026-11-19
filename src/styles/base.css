@@ -1,0 +1,55 @@
+/* ==========================================================================
+   FORMULARIO PQRSF - IPS CLINICAL HOUSE
+   CSS Puro / Pure CSS Stylesheet - Versión Optimizada
+   ========================================================================== */
+
+/* --- Variables Globales --- */
+
+:root {
+  --primary-cyan: #0099cc;
+  --primary-cyan-hover: #0082b0;
+  --primary-cyan-light: #e6f6fb;
+  --brand-navy: #003865;
+  --brand-blue: #005a9c;
+  --text-dark: #222222;
+  --text-body: #444444;
+  --text-sub: #555555;
+  --text-muted: #777777;
+  --input-bg: #f8f9fa;
+  --input-border: #e2e8f0;
+  --input-bottom-line: #0099cc;
+  --input-text: #2d3748;
+  --input-placeholder: #B8C1CC; /* texto guía (placeholder) suave */
+  --card-bg: #ffffff;
+  --card-border: #edf2f7;
+  --font-main: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --max-content-width: 1160px;
+}
+
+/* --- Reseteo y Estilos Base --- */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #fbfcfd;
+  color: var(--text-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animación compartida (lightbox, modales) */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

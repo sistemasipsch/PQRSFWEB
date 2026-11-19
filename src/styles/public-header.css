@@ -1,0 +1,124 @@
+/* Encabezado institucional del portal público */
+
+/* ==========================================================================
+   HEADER SIMPLIFICADO (LOGO + BOTÓN SITIO WEB)
+   ========================================================================== */
+
+.site-header {
+  background-color: #ffffff;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Logotipo */
+
+.brand-group {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.official-logo-img {
+  height: 64px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Botón Redirección al Sitio Web */
+
+.header-action {
+  display: flex;
+  align-items: center;
+}
+
+.btn-visit-site {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary-cyan);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 9px 20px;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 5px rgba(0, 153, 204, 0.25);
+}
+
+.btn-visit-site:hover {
+  background-color: var(--primary-cyan-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 153, 204, 0.35);
+}
+
+.btn-visit-site svg {
+  transition: transform 0.2s ease;
+}
+
+.btn-visit-site:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* Franja Multicolor Inferior */
+
+.header-color-bar {
+  width: 100%;
+  height: 5px;
+  display: flex;
+}
+
+.bar-seg-1 {
+  background-color: #0025d0; flex: 2;
+}
+
+.bar-seg-2 {
+  background-color: #00378f; flex: 2;
+}
+
+.bar-seg-3 {
+  background-color: #007ca5; flex: 2;
+}
+
+.bar-seg-4 {
+  background-color: #0099cc; flex: 2.5;
+}
+
+.bar-seg-5 {
+  background-color: #00b9cc; flex: 2.5;
+}
+
+.header-action-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 900px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+  }
+}

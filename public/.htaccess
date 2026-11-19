@@ -1,0 +1,12 @@
+# Hostinger (Apache/LiteSpeed): las rutas de la aplicación (/gestion-siau, /admin, ...)
+# siempre cargan index.html; los archivos que existen se sirven normalmente.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+  RewriteRule ^ index.html [L]
+</IfModule>

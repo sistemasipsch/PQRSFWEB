@@ -51,7 +51,7 @@ export default function LoginForm({ correoInicial = '', onLogin, onOlvido, onErr
         <button
           type="button"
           className="login-link"
-          onClick={() => onInfo('Las cuentas del panel SIAU las crea el Super Administrador. Para solicitar acceso comuníquese con siau@clinicalhouse.co.')}
+          onClick={() => onInfo('Las cuentas del panel SIAU las crea el área de Sistemas. Para solicitar acceso comuníquese con el área de Sistemas.')}
         >
           ¿No tienes cuenta?
         </button>

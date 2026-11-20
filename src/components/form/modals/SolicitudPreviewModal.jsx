@@ -32,6 +32,9 @@ export default function SolicitudPreviewModal({ datos: d, archivos, enviando, on
   return (
     <div className="sp-overlay" role="dialog" aria-modal="true" aria-labelledby="sp-titulo">
       <div className="sp-card">
+        <button type="button" className="modal-close-x" onClick={onEditar} disabled={enviando} aria-label="Cerrar" title="Cerrar">
+          &times;
+        </button>
         <header className="sp-header">
           <img src="/assets/logo-clinical-house.png" alt="IPS Clinical House" className="sp-logo" />
           <div>

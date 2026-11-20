@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PublicHeader from './components/layout/PublicHeader';
 import PublicFooter from './components/layout/PublicFooter';
 import PqrsfForm from './components/form/PqrsfForm';
 import AdminLoginPage from './components/auth/AdminLoginPage';
@@ -26,7 +25,6 @@ export default function App() {
   if (ruta === 'publico') {
     return (
       <div className="app-container">
-        <PublicHeader />
         <PqrsfForm />
         <PublicFooter />
       </div>

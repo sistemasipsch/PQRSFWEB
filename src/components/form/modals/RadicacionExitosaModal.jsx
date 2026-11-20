@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { imprimirComprobante } from '../../../utils/imprimir';
 
 /** Confirmación de radicación con el número oficial y el comprobante imprimible (PDF). */
 export default function RadicacionExitosaModal({ radicacion: r, onNueva }) {
+  // Bloquea el scroll de la página de fondo y permite cerrar con Escape
+  useEffect(() => {
+    const onKey = (e) => e.key === 'Escape' && onNueva();
+    window.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [onNueva]);
+
   return (
     <div className="modal-overlay">
       <div className="modal-content-card success-card" role="dialog" aria-modal="true" aria-labelledby="exito-titulo">
+        <button type="button" className="modal-close-x" onClick={onNueva} aria-label="Cerrar" title="Cerrar">
+          &times;
+        </button>
+
         <div className="success-badge-icon">&#10003;</div>
 
         <h2 id="exito-titulo" className="success-title">¡Solicitud Radicada Exitosamente!</h2>

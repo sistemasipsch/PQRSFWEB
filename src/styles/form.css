@@ -581,8 +581,39 @@ textarea {
 
 .success-card {
   text-align: center;
-  padding: 32px 24px;
+  padding: 28px 24px 24px;
+  /* Sin barra de desplazamiento: el contenido cabe completo */
+  max-height: none;
+  overflow: visible;
 }
+
+.success-card .consecutive-number {
+  font-size: clamp(18px, 5vw, 26px);
+  word-break: break-all;
+}
+
+/* Botón X para cerrar modales del formulario público */
+.modal-close-x {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #4a5568;
+  font-size: 22px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.modal-close-x:hover:not(:disabled) { background: #f1f5f9; color: #1a202c; }
+.modal-close-x:disabled { opacity: 0.5; cursor: not-allowed; }
 
 .success-badge-icon {
   width: 64px;
